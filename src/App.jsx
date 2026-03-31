@@ -157,6 +157,7 @@ const mapDirectionsUrl =
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -180,8 +181,44 @@ function App() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  useEffect(() => {
+    const finishLoading = () => {
+      window.setTimeout(() => {
+        setIsLoading(false)
+      }, 1250)
+    }
+
+    if (document.readyState === 'complete') {
+      finishLoading()
+      return
+    }
+
+    window.addEventListener('load', finishLoading)
+    return () => window.removeEventListener('load', finishLoading)
+  }, [])
+
   return (
     <div className="page-shell">
+      {isLoading ? (
+        <div className="loader-screen" aria-live="polite" aria-label="Loading website">
+          <div className="loader-card">
+            <div className="loader-indicator" aria-hidden="true">
+              <div className="loader-ring">
+                <span className="loader-dot"></span>
+              </div>
+            </div>
+            <p className="loader-title">Train Mode On</p>
+            <div className="loader-progress" aria-hidden="true">
+              <span className="loader-progress-fill"></span>
+            </div>
+            <div className="loader-meta">
+              <span className="loader-copy">One on One Fitness</span>
+              <span className="loader-percent">100%</span>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
       <nav
         className={`topbar ${isScrolled ? 'topbar-scrolled' : ''} ${isMenuOpen ? 'topbar-menu-open' : ''}`}
       >
