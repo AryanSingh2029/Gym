@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import gym1 from '../gym_1.png'
+import gym2 from '../gym_2.png'
+import gym3 from '../gym_3.png'
+import gym5 from '../gym_5.png'
+import gym6 from '../gym_6.png'
 
 const stats = [
   { value: '12+', label: 'Elite coaches' },
@@ -36,25 +41,25 @@ const programs = [
 
 const trainers = [
   {
-    name: 'Arjun Mehta',
+    name: 'Shaan',
     role: 'Strength Coach',
     text: 'Specializes in muscle building, barbell technique, and progressive overload programs.',
     image:
-      'https://images.unsplash.com/photo-1566753323558-f4e0952af115?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    name: 'Riya Sharma',
+    name: 'Shera',
     role: 'CrossFit Trainer',
     text: 'Leads athletic conditioning and high-energy group sessions with strong technique focus.',
     image:
-      'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=1200&q=80',
   },
   {
-    name: 'Kabir Khan',
+    name: 'Ryan',
     role: 'Transformation Coach',
     text: 'Works on fat loss, accountability, and nutrition-backed training consistency.',
     image:
-      'https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1200&q=80',
   },
 ]
 
@@ -93,45 +98,31 @@ const plans = [
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Modern gym interior with equipment',
+    src: gym1,
+    alt: 'Brooke Fit Gym cardio and treadmill zone',
   },
   {
-    src: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80',
-    alt: 'People training in a gym',
+    src: gym2,
+    alt: 'Brooke Fit Gym dumbbell area with mirrors',
   },
   {
-    src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Well-lit gym workout area',
+    src: gym3,
+    alt: 'Brooke Fit Gym strength floor interior',
   },
   {
-    src: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Strength training equipment in fitness center',
+    src: gym5,
+    alt: 'Brooke Fit Gym branded wall and training machines',
   },
   {
-    src: 'https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Athletic workout session in gym',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Gym member using battle ropes in training area',
+    src: gym6,
+    alt: 'Brooke Fit Gym open floor with cardio equipment',
   },
 ]
 
 const schedule = [
   [
-    'Morning',
-    '5:00 AM - 11:00 AM',
-    'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80',
-  ],
-  [
-    'Evening',
-    '5:00 PM - 10:00 PM',
-    'https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=1200&q=80',
-  ],
-  [
-    'Dance Class',
-    '6:00 PM - 7:30 PM',
+    'Daily Timings',
+    '6:00 AM - 10:00 PM',
     'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1200&q=80',
   ],
 ]
@@ -139,7 +130,7 @@ const schedule = [
 const contactCards = [
   {
     title: 'Address',
-    value: 'Bathinda , 151001 ',
+    value: 'Bangalore , 151001 ',
   },
   {
     title: 'Phone',
@@ -147,7 +138,7 @@ const contactCards = [
   },
   {
     title: 'Email',
-    value: 'hello@oneononefitness.fit',
+    value: 'hello@brookefitgym.fit',
   },
 ]
 
@@ -212,7 +203,7 @@ function App() {
               <span className="loader-progress-fill"></span>
             </div>
             <div className="loader-meta">
-              <span className="loader-copy">One on One Fitness</span>
+              <span className="loader-copy">Brooke Fit Gym</span>
               <span className="loader-percent">100%</span>
             </div>
           </div>
@@ -225,7 +216,7 @@ function App() {
         <div className="brand-lockup">
           <span className="brand-mark">GF</span>
           <div className="brand-copy">
-            <h1>ONE ON ONE FITNESS</h1>
+            <h1>BROOKE FIT GYM</h1>
           </div>
         </div>
 
@@ -481,7 +472,7 @@ function App() {
                 rel="noreferrer"
               >
                 <div className="map-overlay">
-                  <span className="map-pill">One on One Fitness</span>
+                  <span className="map-pill">Brooke Fit Gym</span>
                   <span className="map-pill">Open 24/7</span>
                   <span className="map-pill map-pill-action">Get directions</span>
                 </div>
